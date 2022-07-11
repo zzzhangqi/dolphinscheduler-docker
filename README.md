@@ -1,1 +1,1 @@
-# dolphinscheduler-schema-initializer
+# dolphinscheduler-postgresql
