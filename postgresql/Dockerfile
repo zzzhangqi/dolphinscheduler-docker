@@ -1,5 +1,5 @@
 FROM bitnami/postgresql:11.11.0
-VERSION=3.1.3
+ARG VERSION=3.1.3
 
 ENV POSTGRESQL_DATABASE=dolphinscheduler
 ENV POSTGRESQL_PASSWORD=root
