@@ -5,8 +5,7 @@ ENV POSTGRESQL_DATABASE=dolphinscheduler
 ENV POSTGRESQL_PASSWORD=root
 ENV POSTGRESQL_USERNAME=root
 
-RUN apt-get update && apt -y install wget && \
-    wget -P /docker-entrypoint-initdb.d https://raw.githubusercontent.com/apache/dolphinscheduler/${VERSION}/dolphinscheduler-dao/src/main/resources/sql/dolphinscheduler_postgresql.sql
+RUN curl -L https://ghproxy.com/https://raw.githubusercontent.com/apache/dolphinscheduler/${VERSION}/dolphinscheduler-dao/src/main/resources/sql/dolphinscheduler_postgresql.sql -o /docker-entrypoint-initdb.d/dolphinscheduler_postgresql.sql
 
 VOLUME [ "/bitnami/postgresql" ]
 
