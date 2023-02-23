@@ -1,5 +1,5 @@
 FROM alpine:latest AS DL
-ARG VERSION=3.1.3
+ARG VERSION=3.1.2
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
     apk add --no-cache --update wget && \
